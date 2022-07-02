@@ -176,9 +176,13 @@ hero section start
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Bio section start
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.div-bio-image{
+    place-self: center;
+}
 .bio-image{
     max-width:80% ;
     box-shadow: -2rem -2rem 0 0 var(--helper);
+   
 }
 .bio-data-stats{
     display: flex;
@@ -190,7 +194,24 @@ Bio section start
 .bio-progress-bar{
     width: 90%;
     height: 0.3rem;
-    background-color: var(--para);
+    background-color: var(--para-tint);
+    border-radius: 4rem;
+    box-shadow:yellow;
+    position: relative;
+}
+.bio-progress-bar::before{
+   
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 80;
+    background-color:red;
+    height: inherit;
+    
+}
+h3{
+    margin-bottom: 1rem;
 }
 
 
