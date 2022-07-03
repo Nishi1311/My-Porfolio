@@ -95,6 +95,9 @@ Reusable code
 .grid-two-column{
     grid-template-columns: repeat(2,1fr);
 }
+.grid-three-column{
+    grid-template-columns: repeat(3,1fr);
+}
 .btn{
     background-color:skyblue;
     color: var(--white);
@@ -158,10 +161,7 @@ hero section start
     font-weight: 700;
     font-size: 6.4rem;
 }
-.hero-para{
 
-
-}
 .hero-image{
     align-self: center;
     max-width: 90%;
@@ -194,25 +194,115 @@ Bio section start
 .bio-progress-bar{
     width: 90%;
     height: 0.3rem;
-    background-color: var(--para-tint);
+    background-color:var(--para-tint);
     border-radius: 4rem;
-    box-shadow:yellow;
+    box-shadow:var(--para-tint);
     position: relative;
 }
 .bio-progress-bar::before{
-   
     content: "";
     position: absolute;
     top:0;
     left: 0;
-    width: 80;
-    background-color:red;
+    width: 80%;
+    background-color:var(--helper);
     height: inherit;
-    
 }
+.bio-progress-bar2::before{
+    width: 90%;
+   
+}
+.bio-progress-bar3::before{
+    width: 85%;
+}
+.bio-progress-bar4::before{
+    width: 80%;
+}
+.bio-progress-bar5::before{
+    width: 80%;
+}
+.bio-progress-bar6::before{
+    width: 70%;
+}
+
 h3{
     margin-bottom: 1rem;
 }
+span{
+    background-color: var(--helper);
+    position: absolute;
+    top: 1.5rem;
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 77%;
+   
+}
+.bio-progress-bar2 span{
+    left: 87%;
+}
+.bio-progress-bar3 span{
+    left: 82%;
+}
+.bio-progress-bar4 span{
+    left: 77%;
+}
+.bio-progress-bar5 span{
+    left: 77%;
 
+}
+.bio-progress-bar6 span{
+    left: 67%;
 
+}/*to create a caret*/
+.bio-progress-bar span::after{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 0rem;
+    /*to create a traingle*/
+    border: 0.8rem solid var(--helper) ;
+    border-color: transparent;
+    border-bottom-color:var(--helper);
+    bottom: 1.9rem;;
+    
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+our project area section start
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.section-portfolio{
+    background-color: var(--bg);
+
+}
+.section-portfolio p{
+    max-width: 600px;
+}
+.p-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    margin: 6.4rem 0;
+}
+.portfolio-images{
+    gap: 3.2rem;
+
+}
+.portfolio-images img{
+    width: 100%;
+    border-radius: 1.5rem;
+
+}
+.img-overlay{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    place-self: center;
+
+}
 
