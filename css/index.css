@@ -86,7 +86,7 @@ Reusable code
    
 }
 .container{/* it make responsive*/
-    max-width: 140rem;
+    max-width: 130rem;
     margin: 0 auto;
 }
 .grid{
@@ -97,6 +97,9 @@ Reusable code
 }
 .grid-three-column{
     grid-template-columns: repeat(3,1fr);
+}
+.grid-four-column{
+    grid-template-columns: repeat(4,1fr);
 }
 .btn{
     background-color:skyblue;
@@ -270,7 +273,7 @@ span{
     
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-our project area section start
+our portfolio section start
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .section-portfolio{
     background-color: var(--bg);
@@ -297,12 +300,127 @@ our project area section start
 }
 .img-overlay{
     position: relative;
+    overflow: hidden;
 }
 .overlay{
     position: absolute;
     top: 0;
     left: 0;
-    place-self: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--helper);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatey(100%);
+    border-radius: 1.5rem;
+    transition: all 0.3s linear;
+    
+    
+   
 
 }
+.img-overlay:hover >.overlay{
+    transform: translatey(0);
+    opacity: 0.7;
+
+
+}
+.img-overlay .common-heading{
+    color:black;
+    text-decoration: none;
+}
+.p-btn-active{
+    transform: translatey(-1rem);
+}
+.p-image-not-active{
+    display: none;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ our work counter section start
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.section-work-data{
+    background: slateblue;
+    transition: all 0.7s linear;
+    color: var(--white);
+}
+.section-work-data div{
+    padding: 0 4.1rem;
+    
+}
+.counter{
+    place-self: center;
+    
+  
+}
+.counter-numbers{
+    font-size: 4.8rem;
+}
+.section-work-data p{
+    color: var(--white);
+    text-transform: capitalize;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ our services section start
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.section-services p{
+    max-width: 600px;
+}
+.section-services {
+    transition: all 0.7s linear;
+}
+.service-box{
+  place-self: center;
+  text-align: center;
+  border-radius: 5px;
+  padding: 6.4rem 3.4rem;
+  box-shadow:var(--shadow);
+  transition: all 0.2s linear;
+
+  
+}
+.service-box h3{
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
+
+
+
+.section-services .grid{
+    margin-top: 10rem;
+    row-gap: 10rem;
+    column-gap: 8rem;
+
+}
+.service-box:hover, .service-box:active {
+    transform: translatey(-2rem);
+}
+
+.service-icon{
+    width: 8rem;
+    height: 6rem;
+    background-color: rgb(144 172 209 /20%);
+    border-radius: 74% 26% 78% 22% / 19% 75% 25% 81% ;
+    padding: 2rem, 3rem;
+    position: relative;
+    color: var(--heading);
+    animation: water-wave 3s linear infinite;
+    border: 1px solid black;
+    
+}
+
+
+@keyframes water-wave {
+    0%{
+        border-radius: 74% 26% 78% 22% / 19% 75% 25% 81% ;
+    }
+    50%{
+        border-radius: 3% 97% 15% 85% / 72% 0% 100% 28% ;
+    }
+    100%{
+        border-radius: 74% 26% 78% 22% / 19% 75% 25% 81% ;
+    }
+    
+}
+
 
